@@ -1,0 +1,425 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CyberPunk2020.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CyberPunk2020.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\Akira.otf",
+      "PackagePath": "staticwebassets\\fonts\\Akira.otf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\Cybrpnuk2.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Cybrpnuk2.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\Panic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Panic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\Sex_Pistols.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Sex_Pistols.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\VeniceClassic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\VeniceClassic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\airstrike.ttf",
+      "PackagePath": "staticwebassets\\fonts\\airstrike.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\bad.ttf",
+      "PackagePath": "staticwebassets\\fonts\\bad.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\copsas.ttf",
+      "PackagePath": "staticwebassets\\fonts\\copsas.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\default.ttf",
+      "PackagePath": "staticwebassets\\fonts\\default.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\dream.ttf",
+      "PackagePath": "staticwebassets\\fonts\\dream.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\ma.ttf",
+      "PackagePath": "staticwebassets\\fonts\\ma.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\meow.ttf",
+      "PackagePath": "staticwebassets\\fonts\\meow.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\reace.ttf",
+      "PackagePath": "staticwebassets\\fonts\\reace.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\fonts\\wb.ttf",
+      "PackagePath": "staticwebassets\\fonts\\wb.ttf"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\CyberPunk-logo.jpg",
+      "PackagePath": "staticwebassets\\images\\CyberPunk-logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\CyberPunk.gif",
+      "PackagePath": "staticwebassets\\images\\CyberPunk.gif"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\bakcground.jpg",
+      "PackagePath": "staticwebassets\\images\\bakcground.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\co.png",
+      "PackagePath": "staticwebassets\\images\\co.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\cop.jpg",
+      "PackagePath": "staticwebassets\\images\\cop.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\cor.png",
+      "PackagePath": "staticwebassets\\images\\cor.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\corpo.png",
+      "PackagePath": "staticwebassets\\images\\corpo.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\cplogo_2464x630.gif",
+      "PackagePath": "staticwebassets\\images\\cplogo_2464x630.gif"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\createpunk.jpg",
+      "PackagePath": "staticwebassets\\images\\createpunk.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\fic.png",
+      "PackagePath": "staticwebassets\\images\\fic.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\fight.jpg",
+      "PackagePath": "staticwebassets\\images\\fight.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\fixer.png",
+      "PackagePath": "staticwebassets\\images\\fixer.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\images.png",
+      "PackagePath": "staticwebassets\\images\\images.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\mad.png",
+      "PackagePath": "staticwebassets\\images\\mad.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\med.png",
+      "PackagePath": "staticwebassets\\images\\med.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\medias.png",
+      "PackagePath": "staticwebassets\\images\\medias.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\net.png",
+      "PackagePath": "staticwebassets\\images\\net.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\netrunner.png",
+      "PackagePath": "staticwebassets\\images\\netrunner.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\nomad.png",
+      "PackagePath": "staticwebassets\\images\\nomad.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\rock.png",
+      "PackagePath": "staticwebassets\\images\\rock.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\rockerboy.jpg",
+      "PackagePath": "staticwebassets\\images\\rockerboy.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\sol.png",
+      "PackagePath": "staticwebassets\\images\\sol.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\solo.png",
+      "PackagePath": "staticwebassets\\images\\solo.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\tec.png",
+      "PackagePath": "staticwebassets\\images\\tec.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\images\\techie.png",
+      "PackagePath": "staticwebassets\\images\\techie.png"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\jsantillan4\\Desktop\\CyberPunk2020\\CyberPunk2020\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.CyberPunk2020.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.CyberPunk2020.props",
+      "PackagePath": "build\\CyberPunk2020.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.CyberPunk2020.props",
+      "PackagePath": "buildMultiTargeting\\CyberPunk2020.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.CyberPunk2020.props",
+      "PackagePath": "buildTransitive\\CyberPunk2020.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

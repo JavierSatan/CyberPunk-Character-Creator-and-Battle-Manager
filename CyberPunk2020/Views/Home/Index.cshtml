@@ -1,0 +1,146 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="css/StyleSheet.css" rel="stylesheet" />
+
+<section class="jumbotron text-center">
+    <div class="container text-center">
+        <div class="container">
+            <div class="d-inline-block">
+                <a href="@Url.Action("Index", "Game")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/fight.jpg")" width="350" height="150" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 110px; right: 195px; width: 155px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="meow2" style="color:red; font-size:26px; text-shadow: 1px 2px #000000;">Start a Fight</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <img src="@Url.Content("~/images/CyberPunk-logo.jpg")" width="450" height="150" style="border: 3px solid #FF0000; text-align: right; padding: 20px" />
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("Index", "Character")">
+            <div style="position:relative">
+                        <img src="@Url.Content("~/images/createpunk.jpg")" width="350" height="150" style="border: 3px solid #FF0000; text-align: right;" />
+                 <div style="position:absolute; top: 110px; left: 195px; width: 155px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="meow2" style="color:red; font-size:26px; text-shadow: 1px 2px #000000;">Create Punk</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <p>
+
+        </p>       
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="container text-center">
+            <div class="d-inline-block">
+                <a href="@Url.Action("RockerBoys", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/rockerboy.jpg")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="span5" style="color:red; font-size:20px; text-shadow: 1px 2px #000000;">RockerBoys</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("Solos", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/solo.png")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="span7" style="color:red; font-size:20px; text-shadow: 1px 2px #000000;">SOLOS</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("NetRunners", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/netrunner.png")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="span8" style="color:red; font-size:17px; text-shadow: 1px 2px #000000;">NETRUNNERS</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("Techies", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/techie.png")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="span11" style="color:red; font-size:20px; text-shadow: 1px 2px #000000;">TECHIES</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("Medias", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/medias.png")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="span9" style="color:red; font-size:20px; text-shadow: 1px 2px #000000;">MEDIAS</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("Cops", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/cop.jpg")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="meow" style="color:red; font-size:20px; text-shadow: 1px 2px #000000;">COPS</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("Corpos", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/corpo.png")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="bruh" style="color:red; font-size:20px; text-shadow: 1px 2px #000000;">CORPOS</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("Fixers", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/fixer.png")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="span10" style="color:red; font-size:20px; text-shadow: 1px 2px #000000;">FIXERS</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-inline-block">
+                <a href="@Url.Action("Nomads", "Home")">
+                    <div style="position:relative">
+                        <img src="@Url.Content("~/images/nomad.png")" width="125" height="300" style="border: 3px solid #FF0000; text-align: right;" />
+                        <div style="position:absolute; top: 295px; left: 0px; width: 125px; height: 40px; display:flex; justify-content:center; align-items:center; border: 3px solid red; background-color: white;">
+                            <h1 class="man" style="color:red; font-size:20px; text-shadow: 1px 2px #000000;">NOMADS</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</section>

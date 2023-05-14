@@ -1,0 +1,276 @@
+﻿@model CyberPunk2020.Models.Character
+@using CyberPunk2020.Data.Enum
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+	<title>@Model.Name - Character</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/StyleSheet.css" rel="stylesheet" />
+</head>
+
+<!-- Page Content -->
+<div class="container">
+	<!-- Portfolio Item Heading -->
+	<h1 class="my-4 span8">@Model.Name</h1>
+	<p class="my-4">@Model.Role</p>
+	<p>Age: @Model.age</p>
+	<div class="row">
+		<div class="col-md-4 text-center">
+			<img src="@Model.Image" alt="Image" class="img-thumbnail">
+		</div>
+		<div class="col-md-8">
+			<table class="table table-bordered table-hover">
+				<tbody>
+					<tr>
+						<th>INT</th>
+						<td>@Model.Stats.INT</td>
+						<th>COOL</th>
+						<td>@Model.Stats.COOL</td>
+						<th>MA</th>
+						<td>@Model.Stats.MA</td>
+						<th>REF</th>
+						<td>@Model.Stats.REF</td>
+						<th>ATTR</th>
+						<td>@Model.Stats.ATTR</td>
+					</tr>
+					<tr>
+						<th>BODY</th>
+						<td>@Model.Stats.BODY</td>
+						<th>TECH</th>
+						<td>@Model.Stats.TECH</td>
+						<th>LUCK</th>
+						<td>@Model.Stats.LUCK</td>
+						<th>EMP</th>
+						<td>@Model.Stats.EMP</td>
+						<th>StatPoints</th>
+						<td>@Model.StatPoints</td>
+					</tr>
+				</tbody>
+			</table>
+			@if (Model.Role == RoleCategory.Solo)//you can use if statements
+			{
+				<p>Combat Sense [@Model.Skill.SpecialAbilityLvl]</p>
+				<p>Awareness [@Model.Skill.AwarenessOrNotice]</p>
+				<p>Handgun [@Model.Skill.Handgun]</p>
+				<p>Brawling or Martial Art [@Model.Skill.Brawling]</p>
+				<p>Melee [@Model.Skill.Melee]</p>
+				<p>Weapon Tech [@Model.Skill.WeaponsTech]</p>
+				<p>Rifle [@Model.Skill.Rifle]</p>
+				<p>Submachinegun [@Model.Skill.Submachinegun]</p>
+				<p>Stealth [@Model.Skill.Stealth]</p>
+			}
+			else if (Model.Role == RoleCategory.Nomad)
+			{
+
+				<p>Family [@Model.Skill.SpecialAbilityLvl]</p>
+				<p>Awareness [@Model.Skill.AwarenessOrNotice]</p>
+				<p>Endurance [@Model.Skill.Endurance]</p>
+				<p>Melee [@Model.Skill.Melee]</p>
+				<p>Rifle [@Model.Skill.Rifle]</p>
+				<p>Drive [@Model.Skill.Driving]</p>
+				<p>Basic Tech [@Model.Skill.BasicTech]</p>
+				<p>Wilderness Survival [@Model.Skill.WildernessSurvival]</p>
+				<p>Brawling [@Model.Skill.Brawling]</p>
+				<p>Athletics [@Model.Skill.Athletic]</p>
+			}
+			else if (Model.Role == RoleCategory.RockerBoy)
+			{
+
+				<p> Charismatic Leadership [@Model.Skill.SpecialAbilityLvl]</p>
+				<p>Awareness [@Model.Skill.AwarenessOrNotice]</p>
+				<p>Perform [@Model.Skill.Perform]</p>
+				<p>Wardrobe & Style [@Model.Skill.WardrobeAndStyle]</p>
+				<p>Composition [@Model.Skill.Composition]</p>
+				<p>Brawling [@Model.Skill.Brawling]</p>
+				<p>Play Instrument [@Model.Skill.PlayInstrument]</p>
+				<p>Streetwise [@Model.Skill.Streetwise]</p>
+				<p>Persuasion [@Model.Skill.PersuasionAndFastTalk]</p>
+				<p>Seduction [@Model.Skill.Seduction]</p>
+			}
+			else if (Model.Role == RoleCategory.NetRunner)
+			{
+
+				<p>Interface [@Model.Skill.SpecialAbilityLvl]</p>
+				<p>Awareness [@Model.Skill.AwarenessOrNotice]</p>
+				<p>Basic Tech [@Model.Skill.BasicTech]</p>
+				<p>Education [@Model.Skill.EducationAndGeneralKnowledge]</p>
+				<p>System Knowledge [@Model.Skill.SystemKnowledge]</p>
+				<p>CyberTech [@Model.Skill.CyberTech]</p>
+				<p>CyberDeck Design [@Model.Skill.CyberdeckDesign]</p>
+				<p>Composition [@Model.Skill.Composition]</p>
+				<p>Electronics [@Model.Skill.Electronics]</p>
+				<p>Programming [@Model.Skill.Programming]</p>
+			}
+
+			else if (Model.Role == RoleCategory.Corp)
+			{
+
+				<p>Resources [@Model.Skill.SpecialAbilityLvl]</p>
+				<p>Awareness [@Model.Skill.AwarenessOrNotice]</p>
+				<p>Human Perception [@Model.Skill.HumanPerception]</p>
+				<p>Education [@Model.Skill.EducationAndGeneralKnowledge]</p>
+				<p>Library Search [@Model.Skill.LibrarySearch]</p>
+				<p>Social [@Model.Skill.Social]</p>
+				<p>Persuasion [@Model.Skill.PersuasionAndFastTalk]</p>
+				<p>Stock Market [@Model.Skill.StockMarket]</p>
+				<p>Wardrobe and Style [@Model.Skill.WardrobeAndStyle]</p>
+				<p>Personal Grooming [@Model.Skill.PersonalGrooming]</p>
+			}
+
+			else if (Model.Role == RoleCategory.Techie)
+			{
+
+				<p>Jury Rig [@Model.Skill.SpecialAbilityLvl]</p>
+				<p>Awareness [@Model.Skill.AwarenessOrNotice]</p>
+				<p>Basic Tech [@Model.Skill.BasicTech]</p>
+				<p>Cyber Tech [@Model.Skill.CyberTech]</p>
+				<p>Teaching [@Model.Skill.Teaching]</p>
+				<p>Education [@Model.Skill.EducationAndGeneralKnowledge]</p>
+				<p>Electronic [@Model.Skill.Electronics]</p>
+				<p>Gyro Tech [@Model.Skill.GyroTech]</p>
+				<p>Electonics Security [@Model.Skill.ElectSecurity]</p>
+				<p>Weaponsmith [@Model.Skill.Weaponsmith]</p>
+				<p>Aero Tech [@Model.Skill.AeroTech]</p>
+				<p>AV Tech [@Model.Skill.AVTech]</p>
+			}
+			else if (Model.Role == RoleCategory.Media)
+			{
+
+				<p>Credibility [@Model.Skill.SpecialAbilityLvl]</p>
+				<p>Awareness [@Model.Skill.AwarenessOrNotice]</p>
+				<p>Composition [@Model.Skill.LibrarySearch]</p>
+				<p>Education [@Model.Skill.EducationAndGeneralKnowledge]</p>
+				<p>Persuasion [@Model.Skill.PersuasionAndFastTalk]</p>
+				<p>Human Perception [@Model.Skill.HumanPerception]</p>
+				<p>Social [@Model.Skill.Social]</p>
+				<p>Streetwise [@Model.Skill.Streetwise]</p>
+				<p>Photo & Film [@Model.Skill.PhotoAndFilm]</p>
+				<p>Interview [@Model.Skill.Interview]</p>
+			}
+			else if (Model.Role == RoleCategory.Cop)
+			{
+
+				<p>Authority [@Model.Skill.SpecialAbilityLvl]</p>
+				<p>Awareness [@Model.Skill.AwarenessOrNotice]</p>
+				<p>Handgun [@Model.Skill.Handgun]</p>
+				<p>Human Perception [@Model.Skill.HumanPerception]</p>
+				<p>Athletics [@Model.Skill.Athletic]</p>
+				<p>Education [@Model.Skill.EducationAndGeneralKnowledge]</p>
+				<p>Brawling [@Model.Skill.Brawling]</p>
+				<p>Melee [@Model.Skill.Melee]</p>
+				<p>Interrogation [@Model.Skill.Interrogation]</p>
+				<p>Streetwise [@Model.Skill.Streetwise]</p>
+			}
+		</div>
+
+	</div>
+</div>
+@*<div class="d-inline-block">
+
+            <p> Skills: </p>
+        <p style="overflow-y:auto; max-height:400px;"> ATTR:
+            <br>Personal Grooming [@Model.Skill.PersonalGrooming]<br>
+            <br>Wardrobe and Style [@Model.Skill.WardrobeAndStyle]<br>
+        </p>
+
+        <p style="overflow-y:auto; max-height:400px;">
+            BODY:
+            <br>Endurance [@Model.Skill.Endurance]<br>
+            <br>Strength Feat [@Model.Skill.StrengthFeat]<br>
+            <br>Swimming [@Model.Skill.Swimming]<br>
+        </p>
+            <p>Body: </p>
+            <p>Endurance [@Model.Skill.Endurance]</p>
+            <p>Strength Feat [@Model.Skill.StrengthFeat]</p>
+            <p>Swimming [@Model.Skill.Swimming]</p>
+
+            <p>COOL: </p>
+            <p>Interrogation [@Model.Skill.Interrogation]</p>
+            <p>Oratory [@Model.Skill.Oratory]</p>
+            <p>Resist Torture Or Drugs [@Model.Skill.ResistTortureOrDrugs]</p>
+            <p>Streetwise [@Model.Skill.Streetwise]</p>
+
+            <p>EMPATHY: </p>
+            <p>Human Perception [@Model.Skill.HumanPerception]</p>
+            <p>Interview [@Model.Skill.Interview]</p>
+            <p>Leadership [@Model.Skill.Leadership]</p>
+            <p>Social [@Model.Skill.Social]</p>
+            <p>Persuasion And Fast Talk [@Model.Skill.PersuasionAndFastTalk]</p>
+            <p>Perform [@Model.Skill.Perform]</p>
+
+            <p>INT: </p>
+            <p>Accounting [@Model.Skill.Accounting]</p>
+            <p>Anthropology [@Model.Skill.Anthropology]</p>
+            <p>Awareness Or Notice [@Model.Skill.AwarenessOrNotice]</p>
+            <p>Biology [@Model.Skill.Biology]</p>
+            <p>Botany [@Model.Skill.Botany]</p>
+            <p>Composition [@Model.Skill.Composition]</p>
+            <p>Diagnose Illness [@Model.Skill.DiagnoseIllness]</p>
+            <p>Education And General Knowledge [@Model.Skill.EducationAndGeneralKnowledge]</p>
+            <p>Expert [@Model.Skill.Expert]</p>
+            <p>Gamble [@Model.Skill.Gamble]</p>
+            <p>Geology [@Model.Skill.Geology]</p>
+            <p>Hide Or Evade [@Model.Skill.HideOrEvade]</p>
+            <p>History [@Model.Skill.History]</p>
+            <p>KnowLanguages [@Model.Skill.KnowLanguages]</p>
+            <p>Library Search [@Model.Skill.LibrarySearch]</p>
+            <p>Mathematics [@Model.Skill.Mathematics]</p>
+            <p>Programming [@Model.Skill.Programming]</p>
+            <p>Shadow Or Track [@Model.Skill.ShadowOrTrack]</p>
+            <p>Stock Market [@Model.Skill.StockMarket]</p>
+            <p>System Knowledge [@Model.Skill.SystemKnowledge]</p>
+            <p>Teaching [@Model.Skill.Teaching]</p>
+            <p>Zoology [@Model.Skill.Zoology]</p>
+
+            <p>REF: </p>
+            <p>Archery [@Model.Skill.Archery]</p>
+            <p>Athletic [@Model.Skill.Athletic]</p>
+            <p>Brawling [@Model.Skill.Brawling]</p>
+            <p>Dance [@Model.Skill.Dance]</p>
+            <p>Dodge And Escape [@Model.Skill.DodgeAndEscape]</p>
+            <p>Driving [@Model.Skill.Driving]</p>
+            <p>Fencing [@Model.Skill.Fencing]</p>
+            <p>Handgun [@Model.Skill.Handgun]</p>
+            <p>Heavy Weapons [@Model.Skill.HeavyWeapons]</p>
+            <p>Martial Arts [@Model.Skill.MartialArts]</p>
+            <p>Melee [@Model.Skill.Melee]</p>
+            <p>Motorcycle [@Model.Skill.Motorcycle]</p>
+            <p>Operate Heavy Machinery [@Model.Skill.OperateHeavyMachinery]</p>
+            <p>Pilot Gyro [@Model.Skill.PilotGyro]</p>
+            <p>Pilot Fixed Wing [@Model.Skill.PilotFixedWing]</p>
+            <p>Pilot Dirigible [@Model.Skill.PilotDirigible]</p>
+            <p>Pilot Vect Thrust Vehicle [@Model.Skill.PilotVectThrustVehicle]</p>
+            <p>Rifle [@Model.Skill.Rifle]</p>
+            <p>Stealth [@Model.Skill.Stealth]</p>
+            <p>Submachinegun [@Model.Skill.Submachinegun]</p>
+
+            <p>REF: </p>
+            <p>AeroTech [@Model.Skill.AeroTech]</p>
+            <p>AVTech [@Model.Skill.AVTech]</p>
+            <p>BasicTech [@Model.Skill.BasicTech]</p>
+            <p>Cryotank Operation [@Model.Skill.CryotankOperation]</p>
+            <p>Cyberdeck Design [@Model.Skill.CyberdeckDesign]</p>
+            <p>CyberTech [@Model.Skill.CyberTech]</p>
+            <p>Demolitions [@Model.Skill.Demolitions]</p>
+            <p>Disguise [@Model.Skill.Disguise]</p>
+            <p>Electronics [@Model.Skill.Electronics]</p>
+            <p>ElectSecurity [@Model.Skill.ElectSecurity]</p>
+            <p>FirstAid [@Model.Skill.FirstAid]</p>
+            <p>Forgery [@Model.Skill.Forgery]</p>
+            <p>GyroTech [@Model.Skill.GyroTech]</p>
+            <p>Paint Or Draw [@Model.Skill.PaintOrDraw]</p>
+            <p>Photo And Film [@Model.Skill.PhotoAndFilm]</p>
+            <p>Pharmaceuticals [@Model.Skill.Pharmaceuticals]</p>
+            <p>PickLock [@Model.Skill.PickLock]</p>
+            <p>PickPocket [@Model.Skill.PickPocket]</p>
+            <p>Play Instrument [@Model.Skill.PlayInstrument]</p>
+            <p>Weaponsmith [@Model.Skill.Weaponsmith]</p>
+    </div>
+</div>*@
+<!-- /.container -->

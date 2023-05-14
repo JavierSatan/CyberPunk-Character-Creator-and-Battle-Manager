@@ -1,0 +1,147 @@
+﻿@font-face {
+    font-family: "Roboto";
+    src: url('Roboto.ttf');
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url('Raleway.ttf');
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url('OpenSans.ttf');
+}
+
+@font-face {
+    font-family: "Amatic";
+    src: url('Amatic.ttf');
+}
+
+@font-face {
+    font-family: 'Sex_Pistols';
+    src: url('../fonts/Sex_Pistols.ttf');
+}
+
+@font-face {
+    font-family: 'VeniceClassic';
+    src: url('../fonts/VeniceClassic.ttf');
+}
+
+@font-face {
+    font-family: 'Akira';
+    src: url('../fonts/Akira.otf');
+}
+
+@font-face {
+    font-family: 'airstrike';
+    src: url('../fonts/airstrike.ttf');
+}
+
+@font-face {
+    font-family: 'ma';
+    src: url('../fonts/ma.ttf');
+}
+
+@font-face {
+    font-family: 'wb';
+    src: url('../fonts/wb.ttf');
+}
+
+@font-face {
+    font-family: 'Panic';
+    src: url('../fonts/Panic.ttf');
+}
+
+@font-face {
+    font-family: 'Cybrpnuk2';
+    src: url('../fonts/Cybrpnuk2.ttf');
+}
+
+@font-face {
+    font-family: 'corp';
+    src: url('../fonts/dream.ttf');
+}
+
+@font-face {
+    font-family: 'cop';
+    src: url('../fonts/copsas.ttf');
+}
+
+@font-face {
+    font-family: 'default';
+    src: url('../fonts/default.ttf');
+}
+
+
+body {
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.span1 {
+    font-family: "Roboto";
+}
+
+.span2 {
+    font-family: "Raleway";
+}
+
+.span3 {
+    font-family: "OpenSans";
+}
+
+.span4 {
+    font-family: "Amatic";
+}
+
+.span5 {
+    font-family: "Sex_Pistols";
+}
+
+.span6 {
+    font-family: "VeniceClassic";
+}
+
+.span7 {
+    font-family: "Akira";
+}
+
+.span8 {
+    font-family: "airstrike";
+}
+
+.span9 {
+    font-family: "ma";
+}
+
+.span10 {
+    font-family: "wb";
+}
+
+.span11 {
+    font-family: "Panic";
+}
+
+.man {
+    font-family: "Cybrpnuk2";
+}
+
+.bruh {
+    font-family: "corp";
+}
+
+.meow {
+    font-family: "cop";
+}
+
+.meow2 {
+    font-family: default;
+}
+
+.highlight {
+    display: inline-block;
+    padding: .25em 0;
+    background: #FFC107;
+    color: #ffffff;
+}

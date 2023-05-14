@@ -1,0 +1,1100 @@
+﻿@using CyberPunk2020.Data.Enum
+@using CyberPunk2020.ViewModels
+@model CreateCharacterViewModel
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+
+</head>
+<link href="css/StyleSheet.css" rel="stylesheet" />
+
+<form method="post" asp-action="Create" enctype="multipart/form-data">
+    <!                                                                          this handles basic information for the character>
+    <h1>General Info</h1>
+    <div class="form-group">
+        <label asp-for="Name">Handle</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group" style="width: 150px;">
+        <label asp-for="age">Age</label>
+        <input asp-for="age" class="form-control" placeholder="Enter Age">
+        <span asp-validation-for="age" class="text-danger"></span>
+    </div>
+
+    <div class="form-group" style="width: 300px;">
+        <label asp-for="Image">Character Image</label>
+        <input asp-for="Image" type="file" class="form-control" placeholder="Enter image link">
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+
+    <!                                                                                                      these down here are toggle buttons that lets the user chose which class they want
+                                                                                                            to be>
+    <h1>ROLE</h1>
+    <div class="form-group text-center">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.RockerBoy" id="rockerBoy-radio">
+                    <img src="@Url.Content("~/images/rock.png")" alt="RockerBoy" width="95" height="90">
+                    <div style="margin-top: 5px;">RockerBoy</div>
+                </label>
+            </div>
+
+            
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.Solo" id="solo-radio">
+                    <img src="@Url.Content("~/images/sol.png")" alt="Solo" width="95" height="90">
+                    <div style="margin-top: 5px;">Solo</div>
+                </label>
+            </div>
+
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.NetRunner" id="netRunner-radio">
+                    <img src="@Url.Content("~/images/net.png")" alt="NetRunner" width="95" height="90">
+                    <div style="margin-top: 5px;">NetRunner</div>
+                </label>
+            </div>
+
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.Techie" id="techie-radio">
+                    <img src="@Url.Content("~/images/tec.png")" alt="Techie" width="95" height="90">
+                    <div style="margin-top: 5px;">Techie</div>
+                </label>
+            </div>
+
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.Media" id="media-radio">
+                    <img src="@Url.Content("~/images/med.png")" alt="Media" width="95" height="90">
+                    <div style="margin-top: 5px;">Media</div>
+                </label>
+            </div>
+
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.Cop" id="cop-radio">
+                    <img src="@Url.Content("~/images/co.png")" alt="Cop" width="95" height="90">
+                    <div style="margin-top: 5px;">Cop</div>
+                </label>
+            </div>
+
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.Corp" id="corpo-radio">
+                    <img src="@Url.Content("~/images/cor.png")" alt="Techie" width="95" height="90">
+                    <div style="margin-top: 5px;">Corpos</div>
+                </label>
+            </div>
+
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.Fixer" id="fixer-radio">
+                    <img src="@Url.Content("~/images/fic.png")" alt="Techie" width="95" height="90">
+                    <div style="margin-top: 5px;">Fixer</div>
+                </label>
+            </div>
+
+            <div class="d-inline-block" style="padding-right: 10px;">
+                <label class="btn btn-secondary">
+                    <input type="radio" asp-for="Role" value="@RoleCategory.Nomad" id="nomad-radio">
+                    <img src="@Url.Content("~/images/mad.png")" alt="Techie" width="95" height="90">
+                    <div style="margin-top: 5px;">Nomad</div>
+                </label>
+            </div>
+
+        </div>
+        <span asp-validation-for="Role" class="text-danger"></span>
+    </div>
+
+    <h1>Stats</h1>
+    <div class="form-group">
+        <label asp-for="StatPoints">StatPoints</label>
+        <input asp-for="StatPoints" class="form-control" id="sp-input" placeholder="Enter Stat points">
+        <span asp-validation-for="StatPoints" class="text-danger"></span>
+    </div>
+
+    <div class="container" >
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.INT">INT</label>
+            <input asp-for="Stats.INT" class="form-control" id="int-input">
+            <span asp-validation-for="Stats.INT" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.REF">REF</label>
+            <input asp-for="Stats.REF" class="form-control" id="ref-input">
+            <span asp-validation-for="Stats.REF" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.TECH">TECH</label>
+            <input asp-for="Stats.TECH" class="form-control" id="tech-input">
+            <span asp-validation-for="Stats.TECH" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.COOL">COOL</label>
+            <input asp-for="Stats.COOL" class="form-control" id="cool-input">
+            <span asp-validation-for="Stats.COOL" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.ATTR">ATTR</label>
+            <input asp-for="Stats.ATTR" class="form-control" id="attr-input">
+            <span asp-validation-for="Stats.ATTR" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.LUCK">LUCK</label>
+            <input asp-for="Stats.LUCK" class="form-control" id="luck-input">
+            <span asp-validation-for="Stats.LUCK" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.MA">MA</label>
+            <input asp-for="Stats.MA" class="form-control" id="ma-input">
+            <span asp-validation-for="Stats.MA" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.BODY">BODY</label>
+            <input asp-for="Stats.BODY" class="form-control" id="body-input">
+            <span asp-validation-for="Stats.BODY" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+          <label asp-for="Stats.EMP">EMP</label>
+          <input asp-for="Stats.EMP" class="form-control" id="emp-input">
+          <span asp-validation-for="Stats.EMP" class="text-danger"></span>
+        </div>
+    </div>
+
+    
+    <h1>Stats Derived</h1>
+    <div class="container">
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.Run">Run</label>
+            <input asp-for="Stats.Run" class="form-control" id="run-input" readonly style="-webkit-appearance: none; -moz-appearance: textfield;">
+            <span asp-validation-for="Stats.Run" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.Leap">Leap</label>
+            <input asp-for="Stats.Leap" class="form-control" id="leap-input" readonly style="-webkit-appearance: none; -moz-appearance: textfield;">
+            <span asp-validation-for="Stats.Leap" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.Lift">Lift, KGs</label>
+            <input asp-for="Stats.Lift" class="form-control" id="lift-input" readonly style="-webkit-appearance: none; -moz-appearance: textfield;">
+            <span asp-validation-for="Stats.Lift" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.Carry">Carry, KGs</label>
+            <input asp-for="Stats.Carry" class="form-control" id="carry-input" readonly style="-webkit-appearance: none; -moz-appearance: textfield;">
+            <span asp-validation-for="Stats.Carry" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.Save">Save</label>
+            <input asp-for="Stats.Save" class="form-control" id="save-input" readonly style="-webkit-appearance: none; -moz-appearance: textfield;">
+            <span asp-validation-for="Stats.Save" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.BTM">BTM</label>
+            <input asp-for="Stats.BTM" class="form-control" id="btm-input" readonly style="-webkit-appearance: none; -moz-appearance: textfield;">
+            <span asp-validation-for="Stats.BTM" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Stats.Humanity">Humanity</label>
+            <input asp-for="Stats.Humanity" class="form-control" id="humanity-input" readonly style="-webkit-appearance: none; -moz-appearance: textfield;">
+            <span asp-validation-for="Stats.Humanity" class="text-danger"></span>
+        </div>
+    </div>
+
+    <script>
+      const maInput = document.getElementById('ma-input');
+      const runInput = document.getElementById('run-input');
+        const leapInput = document.getElementById('leap-input');
+
+        maInput.addEventListener('input', () => {
+            runInput.value = maInput.value * 3;
+            leapInput.value = maInput.value * 0.75;
+      });
+    </script>
+
+    <script>
+        const bodyInput = document.getElementById('body-input');
+        const saveInput = document.getElementById('save-input');
+        const btmInput = document.getElementById('btm-input');
+        const carryInput = document.getElementById('carry-input');
+        const liftInput = document.getElementById('lift-input');
+
+        bodyInput.addEventListener('input', () => {
+            saveInput.value = bodyInput.value; 
+            carryInput.value = bodyInput.value * 10;
+            liftInput.value = bodyInput.value * 40;
+            if (bodyInput.value >= 11) {
+                btmInput.value = -5;
+            }
+            else if (bodyInput.value < 3) {
+                btmInput.value = 0
+            }
+            else if (bodyInput.value == 10) {
+                btmInput.value = -4;
+            }
+            else if (bodyInput.value == 9 || bodyInput.value == 8) {
+                btmInput.value = -3;
+            }
+            else if (bodyInput.value == 7 || bodyInput.value == 6 || bodyInput.value == 5) {
+                btmInput.value = -2;
+            }
+            else if (bodyInput.value == 3 || bodyInput.value == 4) {
+                   btmInput.value = -1;
+            }
+            else {
+               btmInput.value = 0;
+            }
+        });
+    </script>
+
+    <script>
+        const empInput = document.getElementById('emp-input');
+        const humanityInput = document.getElementById('humanity-input');
+
+        empInput.addEventListener('input', () => {
+            humanityInput.value = empInput.value * 10;
+        });
+    </script>
+
+    <h1>Carrer Skills</h1>                                      <! this section is where was controll career skills 
+    <span id="selectedRole"></span>
+
+                                                                <! this is where we have our special ability which changes based on what class is toggled>
+    <div>
+        <label asp-for="Skill.SpecialAbility">Special Ability</label>
+        <input asp-for="Skill.SpecialAbility" class="form-control" id="special-ability-input" readonly style="-webkit-appearance: none; -moz-appearance: textfield;">
+        <span asp-validation-for="Skill.SpecialAbility" class="text-danger"></span>
+    </div>
+
+    <div>Career points: <span id="career-points-remaining">40</span></div>
+
+    <div class="form-group d-inline-block" style="width: 80px;">
+        <label asp-for="Skill.SpecialAbilityLvl">Special Level</label>
+        <input asp-for="Skill.SpecialAbilityLvl" class="form-control" id="special-level-input">
+        <span asp-validation-for="Skill.SpecialAbilityLvl" class="text-danger"></span>
+    </div>
+
+
+    <!                                                                                                  all these containers down here as shown based one what is toggled...
+                                                                                                        in terms of carrer skills for a class>
+    <div class="container" id="rockerboy-container"  style="display: none;">
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Perform">Preform</label>
+            <input asp-for="Skill.Perform" class="form-control">
+            <span asp-validation-for="Skill.Perform" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AwarenessOrNotice">Awareness</label>
+            <input asp-for="Skill.AwarenessOrNotice" class="form-control">
+            <span asp-validation-for="Skill.AwarenessOrNotice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.WardrobeAndStyle">Wardobe and Style</label>
+            <input asp-for="Skill.WardrobeAndStyle" class="form-control">
+            <span asp-validation-for="Skill.WardrobeAndStyle" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Composition">Composition</label>
+            <input asp-for="Skill.Composition" class="form-control">
+            <span asp-validation-for="Skill.Composition" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Brawling">Brawling</label>
+            <input asp-for="Skill.Brawling" class="form-control">
+            <span asp-validation-for="Skill.Brawling" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.PlayInstrument">Play Instrument</label>
+            <input asp-for="Skill.PlayInstrument" class="form-control">
+            <span asp-validation-for="Skill.PlayInstrument" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Streetwise">Streetwise</label>
+            <input asp-for="Skill.Streetwise" class="form-control">
+            <span asp-validation-for="Skill.Streetwise" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.PersuasionAndFastTalk">Persuasion</label>
+            <input asp-for="Skill.PersuasionAndFastTalk" class="form-control">
+            <span asp-validation-for="Skill.PersuasionAndFastTalk" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Seduction">Seduction</label>
+            <input asp-for="Skill.Seduction" class="form-control">
+            <span asp-validation-for="Skill.Seduction" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+    <div class="container" id="solo-container" style="display: none;">
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AwarenessOrNotice">Awareness</label>
+            <input asp-for="Skill.AwarenessOrNotice" class="form-control">
+            <span asp-validation-for="Skill.AwarenessOrNotice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Handgun">Handgun</label>
+            <input asp-for="Skill.Handgun" class="form-control">
+            <span asp-validation-for="Skill.Handgun" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            @*make this optional for Martial Arts*@
+            <label asp-for="Skill.Brawling">Brawling</label>
+            <input asp-for="Skill.Brawling" class="form-control">
+            <span asp-validation-for="Skill.Brawling" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Melee">Melee</label>
+            <input asp-for="Skill.Melee" class="form-control">
+            <span asp-validation-for="Skill.Melee" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.WeaponsTech">Weapons Tech</label>
+            <input asp-for="Skill.WeaponsTech" class="form-control">
+            <span asp-validation-for="Skill.WeaponsTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Rifle">Rifle</label>
+            <input asp-for="Skill.Rifle" class="form-control">
+            <span asp-validation-for="Skill.Rifle" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Athletic">Athletic</label>
+            <input asp-for="Skill.Athletic" class="form-control">
+            <span asp-validation-for="Skill.Athletic" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Submachinegun">Submachinegun</label>
+            <input asp-for="Skill.Submachinegun" class="form-control">
+            <span asp-validation-for="Skill.Submachinegun" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Stealth">Stealth</label>
+            <input asp-for="Skill.Stealth" class="form-control">
+            <span asp-validation-for="Skill.Stealth" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container" id="netrunner-container" style="display: none;">
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AwarenessOrNotice">Awarness</label>
+            <input asp-for="Skill.AwarenessOrNotice" class="form-control">
+            <span asp-validation-for="Skill.AwarenessOrNotice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.BasicTech">Basic Tech</label>
+            <input asp-for="Skill.BasicTech" class="form-control">
+            <span asp-validation-for="Skill.BasicTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.EducationAndGeneralKnowledge">Education</label>
+            <input asp-for="Skill.EducationAndGeneralKnowledge" class="form-control">
+            <span asp-validation-for="Skill.EducationAndGeneralKnowledge" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.SystemKnowledge">System Knowledge</label>
+            <input asp-for="Skill.SystemKnowledge" class="form-control">
+            <span asp-validation-for="Skill.SystemKnowledge" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.CyberTech">CyberTech</label>
+            <input asp-for="Skill.CyberTech" class="form-control">
+            <span asp-validation-for="Skill.CyberTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.CyberdeckDesign">CyberTeck Design</label>
+            <input asp-for="Skill.CyberdeckDesign" class="form-control">
+            <span asp-validation-for="Skill.CyberdeckDesign" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Composition">Composition</label>
+            <input asp-for="Skill.Composition" class="form-control">
+            <span asp-validation-for="Skill.Composition" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Electronics">Electronics</label>
+            <input asp-for="Skill.Electronics" class="form-control">
+            <span asp-validation-for="Skill.Electronics" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Programming">Programming</label>
+            <input asp-for="Skill.Programming" class="form-control">
+            <span asp-validation-for="Skill.Programming" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container" id="techie-container" style="display: none;"> @*must add a medtech option*@
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AwarenessOrNotice">Awarness</label>
+            <input asp-for="Skill.AwarenessOrNotice" class="form-control">
+            <span asp-validation-for="Skill.AwarenessOrNotice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.BasicTech">Basic Tech</label>
+            <input asp-for="Skill.BasicTech" class="form-control">
+            <span asp-validation-for="Skill.BasicTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.CyberTech">CyberTech</label>
+            <input asp-for="Skill.CyberTech" class="form-control">
+            <span asp-validation-for="Skill.CyberTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.CyberTech">CyberTech</label>
+            <input asp-for="Skill.CyberTech" class="form-control">
+            <span asp-validation-for="Skill.CyberTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Teaching">Teaching</label>
+            <input asp-for="Skill.Teaching" class="form-control">
+            <span asp-validation-for="Skill.Teaching" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.EducationAndGeneralKnowledge">Education</label>
+            <input asp-for="Skill.EducationAndGeneralKnowledge" class="form-control">
+            <span asp-validation-for="Skill.EducationAndGeneralKnowledge" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Electronics">Electronics</label>
+            <input asp-for="Skill.Electronics" class="form-control">
+            <span asp-validation-for="Skill.Electronics" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Electronics">Electronics</label>
+            <input asp-for="Skill.Electronics" class="form-control">
+            <span asp-validation-for="Skill.Electronics" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AeroTech">AeroTech</label>
+            <input asp-for="Skill.AeroTech" class="form-control">
+            <span asp-validation-for="Skill.AeroTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AVTech">AVTech</label>
+            <input asp-for="Skill.AVTech" class="form-control">
+            <span asp-validation-for="Skill.AVTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Weaponsmith">Weaponsmith</label>
+            <input asp-for="Skill.Weaponsmith" class="form-control">
+            <span asp-validation-for="Skill.Weaponsmith" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.ElectSecurity">Electronics Security</label>
+            <input asp-for="Skill.ElectSecurity" class="form-control">
+            <span asp-validation-for="Skill.ElectSecurity" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.GyroTech">GyroTech</label>
+            <input asp-for="Skill.GyroTech" class="form-control">
+            <span asp-validation-for="Skill.GyroTech" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container" id="media-container" style="display: none;">
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AwarenessOrNotice">Awarness</label>
+            <input asp-for="Skill.AwarenessOrNotice" class="form-control">
+            <span asp-validation-for="Skill.AwarenessOrNotice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Composition">Composition</label>
+            <input asp-for="Skill.Composition" class="form-control">
+            <span asp-validation-for="Skill.Composition" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.EducationAndGeneralKnowledge">Education</label>
+            <input asp-for="Skill.EducationAndGeneralKnowledge" class="form-control">
+            <span asp-validation-for="Skill.EducationAndGeneralKnowledge" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.PersuasionAndFastTalk">Persuasion</label>
+            <input asp-for="Skill.PersuasionAndFastTalk" class="form-control">
+            <span asp-validation-for="Skill.PersuasionAndFastTalk" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.HumanPerception">Human Perception</label>
+            <input asp-for="Skill.HumanPerception" class="form-control">
+            <span asp-validation-for="Skill.HumanPerception" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Social">Social</label>
+            <input asp-for="Skill.Social" class="form-control">
+            <span asp-validation-for="Skill.Social" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Streetwise">Streetwise</label>
+            <input asp-for="Skill.Streetwise" class="form-control">
+            <span asp-validation-for="Skill.Streetwise" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Streetwise">Streetwise</label>
+            <input asp-for="Skill.Streetwise" class="form-control">
+            <span asp-validation-for="Skill.Streetwise" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.PhotoAndFilm">Photo And Film</label>
+            <input asp-for="Skill.PhotoAndFilm" class="form-control">
+            <span asp-validation-for="Skill.PhotoAndFilm" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Interview">Interview</label>
+            <input asp-for="Skill.Interview" class="form-control">
+            <span asp-validation-for="Skill.Interview" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container" id="cop-container" style="display: none;">
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AwarenessOrNotice">Awareness</label>
+            <input asp-for="Skill.AwarenessOrNotice" class="form-control">
+            <span asp-validation-for="Skill.AwarenessOrNotice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Handgun">Handgun</label>
+            <input asp-for="Skill.Handgun" class="form-control">
+            <span asp-validation-for="Skill.Handgun" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.HumanPerception">Human Perception</label>
+            <input asp-for="Skill.HumanPerception" class="form-control">
+            <span asp-validation-for="Skill.HumanPerception" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Athletic">Athletic</label>
+            <input asp-for="Skill.Athletic" class="form-control">
+            <span asp-validation-for="Skill.Athletic" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.EducationAndGeneralKnowledge">Education</label>
+            <input asp-for="Skill.EducationAndGeneralKnowledge" class="form-control">
+            <span asp-validation-for="Skill.EducationAndGeneralKnowledge" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Brawling">Brawling</label>
+            <input asp-for="Skill.Brawling" class="form-control">
+            <span asp-validation-for="Skill.Brawling" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Melee">Melee</label>
+            <input asp-for="Skill.Melee" class="form-control">
+            <span asp-validation-for="Skill.Melee" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Interrogation">Interrogation</label>
+            <input asp-for="Skill.Interrogation" class="form-control">
+            <span asp-validation-for="Skill.Interrogation" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Streetwise">Streetwise</label>
+            <input asp-for="Skill.Streetwise" class="form-control">
+            <span asp-validation-for="Skill.Streetwise" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+
+    
+    
+
+    <div class="container" id="corpo-container" style="display: none;">
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AwarenessOrNotice">Awareness</label>
+            <input asp-for="Skill.AwarenessOrNotice" class="form-control">
+            <span asp-validation-for="Skill.AwarenessOrNotice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.HumanPerception">Human Perception</label>
+            <input asp-for="Skill.HumanPerception" class="form-control">
+            <span asp-validation-for="Skill.HumanPerception" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.EducationAndGeneralKnowledge">Education</label>
+            <input asp-for="Skill.EducationAndGeneralKnowledge" class="form-control">
+            <span asp-validation-for="Skill.EducationAndGeneralKnowledge" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.LibrarySearch">Library Search</label>
+            <input asp-for="Skill.LibrarySearch" class="form-control">
+            <span asp-validation-for="Skill.LibrarySearch" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Social">Social</label>
+            <input asp-for="Skill.Social" class="form-control">
+            <span asp-validation-for="Skill.Social" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.PersuasionAndFastTalk">Persuasion</label>
+            <input asp-for="Skill.PersuasionAndFastTalk" class="form-control">
+            <span asp-validation-for="Skill.PersuasionAndFastTalk" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.StockMarket">Stock Market</label>
+            <input asp-for="Skill.StockMarket" class="form-control">
+            <span asp-validation-for="Skill.StockMarket" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.WardrobeAndStyle">Wardrobe & Style</label>
+            <input asp-for="Skill.WardrobeAndStyle" class="form-control">
+            <span asp-validation-for="Skill.WardrobeAndStyle" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.PersonalGrooming">Personal Grooming</label>
+            <input asp-for="Skill.PersonalGrooming" class="form-control">
+            <span asp-validation-for="Skill.PersonalGrooming" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+
+    
+    
+
+
+    <div class="container" id="fixer-container" style="display: none;">
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.AwarenessOrNotice">Awarness</label>
+            <input asp-for="Skill.AwarenessOrNotice" class="form-control">
+            <span asp-validation-for="Skill.AwarenessOrNotice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Forgery">Forgery</label>
+            <input asp-for="Skill.Forgery" class="form-control">
+            <span asp-validation-for="Skill.Forgery" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Handgun">Handgun</label>
+            <input asp-for="Skill.Handgun" class="form-control">
+            <span asp-validation-for="Skill.Handgun" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Brawling">Brawling</label>
+            <input asp-for="Skill.Brawling" class="form-control">
+            <span asp-validation-for="Skill.Brawling" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Melee">Melee</label>
+            <input asp-for="Skill.Melee" class="form-control">
+            <span asp-validation-for="Skill.Melee" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.PickPocket">Pick Pocket</label>
+            <input asp-for="Skill.PickPocket" class="form-control">
+            <span asp-validation-for="Skill.PickPocket" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Intimidate">Intimidate</label>
+            <input asp-for="Skill.Intimidate" class="form-control">
+            <span asp-validation-for="Skill.Intimidate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.PersuasionAndFastTalk">Persuasion</label>
+            <input asp-for="Skill.PersuasionAndFastTalk" class="form-control">
+            <span asp-validation-for="Skill.PersuasionAndFastTalk" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+    <div class="container" id="nomad-container" style="display: none;">
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Endurance">Endurance</label>
+            <input asp-for="Skill.Endurance" class="form-control">
+            <span asp-validation-for="Skill.Endurance" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Melee">Melee</label>
+            <input asp-for="Skill.Melee" class="form-control">
+            <span asp-validation-for="Skill.Melee" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Rifle">Rifle</label>
+            <input asp-for="Skill.Rifle" class="form-control">
+            <span asp-validation-for="Skill.Rifle" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Driving">Driving</label>
+            <input asp-for="Skill.Driving" class="form-control">
+            <span asp-validation-for="Skill.Driving" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.BasicTech">Basic Tech</label>
+            <input asp-for="Skill.BasicTech" class="form-control">
+            <span asp-validation-for="Skill.BasicTech" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.WildernessSurvival">Wilderness Survival</label>
+            <input asp-for="Skill.WildernessSurvival" class="form-control">
+            <span asp-validation-for="Skill.WildernessSurvival" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Brawling">Brawling</label>
+            <input asp-for="Skill.Brawling" class="form-control">
+            <span asp-validation-for="Skill.Brawling" class="text-danger"></span>
+        </div>
+
+        <div class="form-group d-inline-block" style="width: 80px;">
+            <label asp-for="Skill.Athletic">Athletic</label>
+            <input asp-for="Skill.Athletic" class="form-control">
+            <span asp-validation-for="Skill.Athletic" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!                                                                                                    this handles the carrer skill points >
+
+    <script>
+        const skillForms = document.querySelectorAll('#nomad-container input[type="number"]');
+        const careerPointsRemaining = document.getElementById('career-points-remaining');
+        const specialLevelInput = document.getElementById('special-level-input');
+
+        // Set the initial value of SpecialAbilityLvl and Career points remaining to 0.
+        let specialAbilityLevel = 0;
+        let skillPoints = 40;
+        let previousValues = {};
+
+        specialLevelInput.value = specialAbilityLevel;
+        careerPointsRemaining.innerText = skillPoints;
+
+        // Listen for changes to the Special Ability Level input
+        specialLevelInput.addEventListener('input', () => {
+            const newSpecialAbilityLevel = Number(specialLevelInput.value);
+            const pointsToAdd = newSpecialAbilityLevel - specialAbilityLevel;
+
+            if (skillPoints - pointsToAdd < 0 || newSpecialAbilityLevel < 0) {
+                specialLevelInput.value = specialAbilityLevel;
+                return;
+            }
+
+            if (pointsToAdd > 0 && skillPoints <= 0) {
+                specialLevelInput.value = specialAbilityLevel;
+                return;
+            }
+
+            skillPoints -= pointsToAdd;
+            specialAbilityLevel = newSpecialAbilityLevel;
+            careerPointsRemaining.innerText = skillPoints;
+
+            // Update the previousValues object so that we can add back any skill points that are removed later
+            previousValues['SpecialAbilityLvl'] = specialAbilityLevel;
+            previousValues['CareerPointsRemaining'] = skillPoints;
+        });
+
+        // Listen for changes to the skill inputs
+        skillForms.forEach((form) => {
+            const skillName = form.name;
+
+            form.addEventListener('input', () => {
+                const newValue = Number(form.value);
+                const oldValue = previousValues[skillName] || 0;
+                const pointsToAdd = newValue - oldValue;
+
+                if (skillPoints - pointsToAdd < 0 || newValue < 0) {
+                    form.value = oldValue;
+                    return;
+                }
+
+                if (pointsToAdd > 0 && skillPoints <= 0) {
+                    form.value = oldValue;
+                    return;
+                }
+
+                skillPoints -= pointsToAdd;
+                careerPointsRemaining.innerText = skillPoints;
+
+                // Update the previousValues object with the new value of the input
+                previousValues[skillName] = newValue;
+            });
+        });
+    </script>
+
+
+    @*<h1>Skill</h1>*@
+
+
+
+    <!                                                                                     this handles what specail ability the user get based on what class they choose as well as displaying the
+                                                                                            correct carrer skills>
+    <script>
+        const soloRadio = document.getElementById('solo-radio');
+        const rockerBoyRadio = document.getElementById('rockerBoy-radio');
+        const netRunnerBoyRadio = document.getElementById('netRunner-radio');
+        const techieRadio = document.getElementById('techie-radio');
+        const mediaRadio = document.getElementById('media-radio');
+        const copRadio = document.getElementById('cop-radio');
+        const corpoRadio = document.getElementById('corpo-radio');
+        const fixerRadio = document.getElementById('fixer-radio');
+        const nomadRadio = document.getElementById('nomad-radio');
+
+        const rockerboyContainer = document.getElementById('rockerboy-container');
+        const soloContainer = document.getElementById('solo-container');
+        const netrunnerContainer = document.getElementById('netrunner-container');
+        const techieContainer = document.getElementById('techie-container');
+        const mediaContainer = document.getElementById('media-container');
+        const copContainer = document.getElementById('cop-container');
+        const corpoContainer = document.getElementById('corpo-container');
+        const fixerContainer = document.getElementById('fixer-container');
+        const nomadContainer = document.getElementById('nomad-container');
+
+
+        const specialAbilityInput = document.getElementById('special-ability-input');
+
+        
+
+        rockerBoyRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'CharismaLeadership';
+
+            rockerboyContainer.style.display = 'block';
+            soloContainer.style.display = 'none';
+            netrunnerContainer.style.display = 'none';
+            techieContainer.style.display = 'none';
+            mediaContainer.style.display = 'none';
+            copContainer.style.display = 'none';
+            corpoContainer.style.display = 'none';
+            fixerContainer.style.display = 'none';
+            nomadContainer.style.display = 'none';
+        });
+
+        soloRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'CombatSense';
+
+            rockerboyContainer.style.display = 'none';
+            soloContainer.style.display = 'block';
+            netrunnerContainer.style.display = 'none';
+            techieContainer.style.display = 'none';
+            mediaContainer.style.display = 'none';
+            copContainer.style.display = 'none';
+            corpoContainer.style.display = 'none';
+            fixerContainer.style.display = 'none';
+            nomadContainer.style.display = 'none';
+        });
+
+        netRunnerBoyRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'Interface';
+
+            rockerboyContainer.style.display = 'none';
+            soloContainer.style.display = 'none';
+            netrunnerContainer.style.display = 'block';
+            techieContainer.style.display = 'none';
+            mediaContainer.style.display = 'none';
+            copContainer.style.display = 'none';
+            corpoContainer.style.display = 'none';
+            fixerContainer.style.display = 'none';
+            nomadContainer.style.display = 'none';
+        });
+
+        techieRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'JuryRig';
+
+            rockerboyContainer.style.display = 'none';
+            soloContainer.style.display = 'none';
+            netrunnerContainer.style.display = 'none';
+            techieContainer.style.display = 'block';
+            mediaContainer.style.display = 'none';
+            copContainer.style.display = 'none';
+            corpoContainer.style.display = 'none';
+            fixerContainer.style.display = 'none';
+            nomadContainer.style.display = 'none';
+        });
+
+        mediaRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'Credibility';
+
+            rockerboyContainer.style.display = 'none';
+            soloContainer.style.display = 'none';
+            netrunnerContainer.style.display = 'none';
+            techieContainer.style.display = 'none';
+            mediaContainer.style.display = 'block';
+            copContainer.style.display = 'none';
+            corpoContainer.style.display = 'none';
+            fixerContainer.style.display = 'none';
+            nomadContainer.style.display = 'none';
+        });
+
+        copRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'Authority';
+
+            rockerboyContainer.style.display = 'none';
+            soloContainer.style.display = 'none';
+            netrunnerContainer.style.display = 'none';
+            techieContainer.style.display = 'none';
+            mediaContainer.style.display = 'none';
+            copContainer.style.display = 'block';
+            corpoContainer.style.display = 'none';
+            fixerContainer.style.display = 'none';
+            nomadContainer.style.display = 'none';
+        });
+
+        corpoRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'Resources';
+
+            rockerboyContainer.style.display = 'none';
+            soloContainer.style.display = 'none';
+            netrunnerContainer.style.display = 'none';
+            techieContainer.style.display = 'none';
+            mediaContainer.style.display = 'none';
+            copContainer.style.display = 'none';
+            corpoContainer.style.display = 'block';
+            fixerContainer.style.display = 'none';
+            nomadContainer.style.display = 'none';
+        });
+
+        fixerRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'Streetdeal';
+
+            rockerboyContainer.style.display = 'none';
+            soloContainer.style.display = 'none';
+            netrunnerContainer.style.display = 'none';
+            techieContainer.style.display = 'none';
+            mediaContainer.style.display = 'none';
+            copContainer.style.display = 'none';
+            corpoContainer.style.display = 'none';
+            fixerContainer.style.display = 'block';
+            nomadContainer.style.display = 'none';
+        });
+
+        nomadRadio.addEventListener('click', () => {
+            specialAbilityInput.value = 'Family';
+            
+            rockerboyContainer.style.display = 'none';
+            soloContainer.style.display = 'none';
+            netrunnerContainer.style.display = 'none';
+            techieContainer.style.display = 'none';
+            mediaContainer.style.display = 'none';
+            copContainer.style.display = 'none';
+            corpoContainer.style.display = 'none';
+            fixerContainer.style.display = 'none';
+            nomadContainer.style.display = 'block';
+        });
+
+    </script>
+    <p> </p>
+    <div>
+        <button type="submit" class="btn btn-primary">Confirm</button>
+    </div>
+</form>
+

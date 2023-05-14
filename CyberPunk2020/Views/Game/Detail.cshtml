@@ -1,0 +1,121 @@
+﻿@model Game
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!-- Page Content -->
+<div class="container">
+    <!-- Left Item Row Stats-->
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <h1>@Model.name</h1>
+            <img class="img-fluid" src="@Model.Image" width="255" height="225" alt="">
+            <h1>Description:</h1>
+            <p>@Model.description</p>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <h1 class="my-4">
+                Punks
+                <a type="button" asp-controller="Game" asp-action="CreatePlayer" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-secondary">Add player?</a>
+
+            </h1>
+
+            <table style="border-collapse: collapse; width: 100%;">
+                <tr>
+                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
+                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">HP</th>
+                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">BTM</th>
+                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Dead?</th>
+                </tr>
+                @foreach (var item in Model.Players)
+                {
+
+                    <tr>
+
+
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">@item.Name</td>
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">@item.HP</td>
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">@item.BTM</td>
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">
+                            <form method="post" asp-controller="Game" asp-action="DeletePlayer" asp-route-gameId="@Model.Id" asp-route-playerId="@item.Id">
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">KILL!?!?</button>
+                            </form>
+                        </td>
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">
+                            <form method="post" asp-controller="Game" asp-action="InflictDamage" asp-route-gameId="@Model.Id" asp-route-playerId="@item.Id">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name="damageAmount" placeholder="">
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">DMG</button>
+                            </form>
+                        </td>
+
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">
+                            <form method="post" asp-controller="Game" asp-action="heal" asp-route-gameId="@Model.Id" asp-route-playerId="@item.Id">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name="healAmount" placeholder="">
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">Heal</button>
+                            </form>
+                        </td>
+
+
+                    </tr>
+                }
+            </table>
+
+        </div>
+
+        <div class="col-md-4">
+            <h1 class="my-4">
+                NPCS
+
+                <a type="button" asp-controller="Game" asp-action="CreateNPC" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-secondary">Add NPC?</a>
+            </h1>
+            <table style="border-collapse: collapse; width: 100%;">
+                <tr>
+                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
+                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">HP</th>
+                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">BTM</th>
+                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Dead?</th>
+                </tr>
+                @foreach (var item in Model.Npcs)
+                {
+                    <tr>
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">@item.Name</td>
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">@item.HP</td>
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">@item.BTM</td>
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">
+                            <form method="post" asp-controller="Game" asp-action="DeleteNPC" asp-route-gameId="@Model.Id" asp-route-npcId="@item.Id">
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">KILL!?!?</button>
+                            </form>
+                        </td>
+
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">
+                            <form method="post" asp-controller="Game" asp-action="InflictDamageNPC" asp-route-gameId="@Model.Id" asp-route-npcId="@item.Id">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name="damageAmount" placeholder="">
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">DMG</button>
+                            </form>
+                        </td>
+
+                        <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">
+                            <form method="post" asp-controller="Game" asp-action="healNPC" asp-route-gameId="@Model.Id" asp-route-npcId="@item.Id">
+                                <div class="form-group">
+                                    <input type="number" class="form-control" name="healAmount" placeholder="">
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-outline-secondary">Heal</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /.container -->

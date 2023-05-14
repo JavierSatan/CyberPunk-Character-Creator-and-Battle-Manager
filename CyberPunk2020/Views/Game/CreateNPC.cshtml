@@ -1,0 +1,24 @@
+﻿@using CyberPunk2020.ViewModels
+@model CreateNPCViewModel
+
+<form method="post" asp-action="CreateNPC">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="HP">HP</label>
+        <input asp-for="HP" class="form-control" placeholder="Enter HP">
+        <span asp-validation-for="HP" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BTM">BTM</label>
+        <input asp-for="BTM" class="form-control" placeholder="Enter BTM">
+        <span asp-validation-for="BTM" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

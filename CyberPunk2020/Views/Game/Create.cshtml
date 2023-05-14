@@ -1,0 +1,32 @@
+﻿@using CyberPunk2020.ViewModels
+@model CreateGameViewModel
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<form method="post" asp-action="Create" enctype="multipart/form-data">
+    <!--add the last part to upload images n stuf--enctype="multipart/form-data"-->
+    <div class="form-group">
+        <label asp-for="name">Name</label>
+        <input asp-for="name" class="form-control" placeholder="Enter Battle Name">
+        <span asp-validation-for="name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="description">Description</label>
+        <input asp-for="description" class="form-control" placeholder="Enter the Description of the Fight">
+        <span asp-validation-for="description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Image">Image</label>
+        <input asp-for="Image" type="file" class="form-control" placeholder="Enter image link">
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

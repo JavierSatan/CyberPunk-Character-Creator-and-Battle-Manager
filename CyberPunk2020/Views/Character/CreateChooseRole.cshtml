@@ -1,0 +1,45 @@
+﻿@using CyberPunk2020.Data.Enum
+@using CyberPunk2020.ViewModels
+@model CreateCharacterViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Choose Role!</h1>
+<div>Handle: </div>
+<form method="post" asp-action="Create" asp-route="@Model.Id" aspenctype="multipart/form-data">
+    <!--add the last part to upload images n stuf--enctype="multipart/form-data"-->
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter Handle">
+        <span asp-validation-for="Name" class="text-danger"><</span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="age">age</label>
+        <input asp-for="age" class="form-control" placeholder="Enter Age">
+        <span asp-validation-for="age" class="text-danger"><</span>
+    </div>
+
+    <div class="form-group">
+        <select asp-for="Role" asp-items="@Html.GetEnumSelectList<RoleCategory>()" class="form-control form-control-lg">
+            <option>--Select--</option>
+        </select>
+        <span asp-validation-for="Role" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="StatPoints">StatPoints</label>
+        <input asp-for="StatPoints" class="form-control" placeholder="Enter Stat points">
+        <span asp-validation-for="StatPoints" class="text-danger"><</span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Image">Image</label>
+        <input asp-for="Image" type="file" class="form-control" placeholder="Enter image link">
+        <span asp-validation-for="Image" class="text-danger"><</span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
